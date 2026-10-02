@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  
+  <!-- Google Web Fonts -->
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap' rel='stylesheet'/>
+  
+  <b:skin><![CDATA[
+  /* ========================================================
+     MOVIEHUB4Y / BOLLY4U BLOGGER THEME
+     Fully compatible with all Google Blogger (Blogspot) sites
+     ======================================================== */
+  
+  :root {
+    --primary: #cc0000;
+    --primary-hover: #b30000;
+    --blue-accent: #0066cc;
+    --blue-hover: #0055aa;
+    --dark-bg: #161a23;
+    --dark-nav: #1f2430;
+    --dark-top: #0f131a;
+    --body-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-main: #222222;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--body-bg);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Top Alert Ribbon */
+  .top-bar {
+    background-color: var(--dark-top);
+    border-bottom: 1px solid #2d3748;
+    color: #cbd5e1;
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+  .top-bar-inner {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .top-bar-badge {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 9px;
+  }
+  .domain-highlight {
+    color: #f59e0b;
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+  .telegram-link {
+    color: #38bdf8;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Header */
+  .header-main {
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid #1f293d;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  }
+  .header-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .brand-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .brand-title .hub { color: #f59e0b; }
+  .brand-title .num { color: #ff3333; }
+  .brand-ext {
+    font-size: 10px;
+    font-family: var(--font-mono);
+    background: rgba(245, 158, 11, 0.2);
+    color: #fcd34d;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+  }
+  
+  /* Search Box */
+  .search-wrapper {
+    flex: 1;
+    max-width: 550px;
+    position: relative;
+  }
+  .search-input {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 14px 8px 36px;
+    color: #fff;
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-input:focus {
+    border-color: var(--blue-accent);
+  }
+  .search-icon-svg {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    fill: #6e7681;
+  }
+  
+  /* Category Navigation */
+  .category-nav {
+    background-color: var(--dark-nav);
+    border-bottom: 1px solid #2d3748;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .category-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 4px 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .cat-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #cbd5e1;
+    background: transparent;
+    border: none;
+    transition: background 0.15s, color 0.15s;
+    display: inline-block;
+  }
+  .cat-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  .cat-btn.active {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  /* Main Container */
+  .main-wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  /* Section Header */
+  .section-bar {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+  }
+  .section-indicator {
+    width: 4px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
+  
+  /* Movies Grid */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media (min-width: 640px) { .movies-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 768px) { .movies-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 1024px) { .movies-grid { grid-template-columns: repeat(5, 1fr); } }
+  @media (min-width: 1280px) { .movies-grid { grid-template-columns: repeat(6, 1fr); } }
+  @media (min-width: 1536px) { .movies-grid { grid-template-columns: repeat(7, 1fr); } }
+  @media (min-width: 1800px) { .movies-grid { grid-template-columns: repeat(8, 1fr); } }
+  
+  /* Movie Card */
+  .movie-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .movie-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--blue-accent);
+    box-shadow: 0 8px 16px -4px rgba(0,0,0,0.1);
+  }
+  .poster-box {
+    position: relative;
+    aspect-ratio: 3/4;
+    width: 100%;
+    background: #e2e8f0;
+    overflow: hidden;
+    display: block;
+  }
+  .poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .movie-card:hover .poster-img {
+    transform: scale(1.04);
+  }
+  .badge-quality {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .badge-rating {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fbbf24;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+  }
+  .badge-lang {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  .card-info {
+    padding: 8px 10px;
+  }
+  .card-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.35;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-meta {
+    font-size: 10px;
+    color: #64748b;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Single Movie Post Page Layout */
+  .movie-post-view {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .post-top-notice {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 11px;
+    text-align: center;
+    color: #475569;
+    margin-bottom: 14px;
+  }
+  .post-title {
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  
+  /* Post Body Styling */
+  .post-body {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #334155;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Exact Quality Block & Boxed Buttons */
+  .quality-tier-block {
+    margin-bottom: 20px;
+  }
+  .quality-tier-title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--blue-accent);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .boxed-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  @media (min-width: 540px) {
+    .boxed-buttons-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .box-dl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background: #f8f9fa;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    color: #1e293b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.15s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .box-dl-btn:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+  }
+  
+  /* Footer */
+  .footer-main {
+    background: #08090d;
+    border-top: 1px solid #1e293b;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 40px;
+    padding: 30px 16px;
+  }
+  .footer-inner {
+    max-width: 1800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Hide standard Blogger attribution */
+  .post-feeds, .feed-links, #navbar-iframe, .attribution, .blog-pager {
+    display: none !important;
+  }
+  ]]></b:skin>
+</head>
+<body>
+
+  <!-- Top Alert Ribbon -->
+  <div class='top-bar'>
+    <div class='top-bar-inner'>
+      <div>
+        <span class='top-bar-badge'>Official</span>
+        <span> Official Site: </span>
+        <span class='domain-highlight'>moviehub4y.online</span>
+        <span> · Fast Movies Download (No Fake Links)</span>
+      </div>
+      <div>
+        <a class='telegram-link' href='https://telegram.org' rel='noreferrer' target='_blank'>
+          ✈ Join Telegram Channel For Instant Alerts
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class='header-main'>
+    <div class='header-container'>
+      <a class='brand-logo' expr:href='data:blog.homepageUrl'>
+        <div class='brand-icon'>M</div>
+        <div class='brand-title'>
+          MOVIE<span class='hub'>HUB</span><span class='num'>4Y</span><span class='brand-ext'>.ONLINE</span>
+        </div>
+      </a>
+
+      <!-- Search Box -->
+      <div class='search-wrapper'>
+        <form action='/search' method='get'>
+          <svg class='search-icon-svg' viewBox='0 0 24 24'>
+            <path d='M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/>
+          </svg>
+          <input class='search-input' name='q' placeholder='Search movies, series, Dual Audio, 4K UHD...' type='text'/>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Navigation Ribbon -->
+  <nav class='category-nav'>
+    <div class='category-container'>
+      <a class='cat-btn active' expr:href='data:blog.homepageUrl'>All Movies</a>
+      <a class='cat-btn' href='/search/label/Bollywood'>Bollywood Movies</a>
+      <a class='cat-btn' href='/search/label/Web%20Series'>Web Series</a>
+      <a class='cat-btn' href='/search/label/K-Drama'>K-Drama</a>
+      <a class='cat-btn' href='/search/label/Animation'>Animation</a>
+      <a class='cat-btn' href='/search/label/South%20Hindi'>South Hindi Dubbed</a>
+      <a class='cat-btn' href='/search/label/Hollywood'>Hollywood (Hindi Dubbed)</a>
+      <a class='cat-btn' href='/search/label/Dual%20Audio'>Dual Audio</a>
+      <a class='cat-btn' href='/search/label/Punjabi'>Punjabi Movies</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class='main-wrapper'>
+    <b:section class='main' id='main' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+        <b:includable id='main'>
+          
+          <!-- Check if Single Post Page -->
+          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <b:loop values='data:posts' var='post'>
+              <article class='movie-post-view'>
+                <div class='post-top-notice'>
+                  <strong>MovieHub4y:</strong> Download Free Movies &amp; Series in 480p, 720p, 1080p and 4K Ultra HD Dual Audio.
+                </div>
+
+                <h1 class='post-title'><data:post.title/></h1>
+
+                <div class='post-body entry-content'>
+                  <data:post.body/>
+                </div>
+
+                <div style='text-align: center; margin-top: 24px;'>
+                  <a class='box-dl-btn' href='https://telegram.org' rel='noreferrer' style='display: inline-block; background: #0088cc; color: #fff; max-width: 400px; margin: 0 auto;' target='_blank'>
+                    ✈ Join Telegram Channel For Instant Alerts
+                  </a>
+                </div>
+              </article>
+            </b:loop>
+          <b:else/>
+            <!-- Home, Search, and Category/Label Views: Movie Cards Grid -->
+            <div class='section-bar'>
+              <div class='section-title'>
+                <div class='section-indicator'></div>
+                <span>
+                  <b:if cond='data:blog.searchLabel'>
+                    <data:blog.searchLabel/> Movies Download
+                  <b:else/>
+                    <b:if cond='data:blog.searchQuery'>
+                      Results for &quot;<data:blog.searchQuery/>&quot;
+                    <b:else/>
+                      Latest Movies &amp; Series Download
+                    </b:if>
+                  </b:if>
+                </span>
+              </div>
+            </div>
+
+            <div class='movies-grid'>
+              <b:loop values='data:posts' var='post'>
+                <article class='movie-card'>
+                  <a class='poster-box' expr:href='data:post.url'>
+                    <b:if cond='data:post.firstImageUrl'>
+                      <img alt='Poster' class='poster-img' expr:src='data:post.firstImageUrl'/>
+                    <b:else/>
+                      <b:if cond='data:post.thumbnailUrl'>
+                        <img alt='Poster' class='poster-img' expr:src='data:post.thumbnailUrl'/>
+                      <b:else/>
+                        <img alt='Poster' class='poster-img' src='https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&amp;fit=crop&amp;w=600&amp;q=80'/>
+                      </b:if>
+                    </b:if>
+                    <span class='badge-quality'>WEB-DL</span>
+                    <span class='badge-rating'>★ 7.5</span>
+                    <span class='badge-lang'>Dual Audio</span>
+                  </a>
+                  <div class='card-info'>
+                    <h3 class='card-title'>
+                      <a expr:href='data:post.url'><data:post.title/></a>
+                    </h3>
+                    <div class='card-meta'>
+                      <span style='color: var(--blue-accent); font-weight: 700;'>480p · 720p · 1080p</span>
+                    </div>
+                  </div>
+                </article>
+              </b:loop>
+            </div>
+          </b:if>
+
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </main>
+
+  <!-- Footer -->
+  <footer class='footer-main'>
+    <div class='footer-inner'>
+      <div style='font-size: 18px; font-weight: 800; color: #fff;'>
+        MOVIE<span style='color: #f59e0b;'>HUB</span><span style='color: #ff3333;'>4Y</span>.ONLINE
+      </div>
+      <p style='margin-top: 6px; color: #64748b;'>
+        Free movie download portal for Bollywood, Hollywood Hindi Dubbed, South Indian, and Web Series.
+      </p>
+      <div style='color: #475569; font-size: 10px; border-top: 1px solid #1e293b; padding-top: 14px; margin-top: 14px;'>
+        Copyright &#169; 2026 MovieHub4y.online. Hosted on Google Blogger.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

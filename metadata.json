@@ -1,0 +1,6 @@
+{
+  "name": "Bolly4u - Movies & Series Portal",
+  "description": "Explore trending Bollywood movies, Hollywood Hindi dubbed, South Indian cinema, and OTT web series in 480p, 720p, 1080p, and 4K Ultra HD.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
